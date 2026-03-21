@@ -193,6 +193,9 @@ Core Contributors
 #### License
 This project is licensed under the MIT License — see LICENSE for details.
 
+#### Screenshots and GIFs
+
+
 #### Changelog
 v1.0.0
 - Initial release
