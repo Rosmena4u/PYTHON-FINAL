@@ -25,137 +25,76 @@ To get the system running on your local machine, follow these four steps:
 #### Usage
 This section explains how to run and use the system.
 
-🔐 Creating an Admin Account
-
-Before logging in, you need to create an admin account manually.
-
-Step 1: Generate Password Hash
-
-Create a Python file (e.g., create_hash.py) and add:
-
+Before logging in, you need to create an admin account .
+     Step 1: Generate Password Hash
+             Create a Python file (e.g., create_hash.py) and add:
+#systax
 import hashlib
-
 password = "yourpassword"  # Put your password here
 hashed = hashlib.md5(password.encode()).hexdigest()
 print(hashed)
 
 Run the file, and you will see a hash output in the terminal.
-
-Example:
-
-9e3669d19b675bd57058fd4664205d2a
+Example:  9e3669d19b675bd57058fd4664205d2a
 
 Copy this hash — you will need it in the next step.
 
-Step 2: Create Admin File
+   Step 2: Create Admin File
+           Create a file called:"admin1.txt" inside the "data/" folder ,Add your username and      
+           hashed password: admin1,9e3669d19b675bd57058fd4664205d2a
+   Step 3: Login
+           - Login using your username and your real password (not the hash)
+           - If you enter the wrong password 3 times, the system will lock for 5 seconds
 
-Create a file called:
-
-data/admin1.txt
-
-Add your username and hashed password:
-
-admin1,9e3669d19b675bd57058fd4664205d2a
-Step 3: Login
-- Login using your real password (not the hash)
-- If you enter the wrong password 3 times, the system will lock for 5 seconds
-🏠 Main Menu
-
-After logging in:
+After logging in you will see a Main Menu:
 
 1. Dashboard / Reporting
 2. Inventory Management
 3. Sales Management
 4. Exit
-📊 1. Dashboard / Reporting
-- Weekly Revenue Detail
+   
+If you chose  1. Dashboard / Reporting you will see
+    - Weekly Revenue Detail
+       → Shows day-by-day breakdown (Monday → Sunday)
+    - Change Month View
+       → Select month (1–12)
+    - Run Strategic Business Analysis
+       → Compares this month vs last month
+       → Shows peak sales day
+    - Return to Menu
+    
+If you chose 2. Inventory Management you will see
+    - Add Product
+       → Add product name & code
+       → Add variants (color, quantity, price)
+    - View Products
+       → Displays all items in a table
+       →  Items with < 5 stock show LOW STOCK
+    - Search
+      → Search by product code or variant code
+    - Update Product 
+        → Enter product code to update :
+    - Update Variant , Name , Code , Color ,Quantity, Price
+    - Delete  : Delete Product , Delete Single Variant
+    - Back to Main Menu
 
-→ Shows day-by-day breakdown (Monday → Sunday)
-
-- Change Month View
-
-→ Select month (1–12)
-
-- Run Strategic Business Analysis
-
-→ Compares this month vs last month
-
-→ Shows peak sales day
-
-- Return to Menu
-📦 2. Inventory Management
-- Add Product
-
-→ Add product name & code
-
-→ Add variants (color, quantity, price)
-
-- View Products
-
-→ Displays all items in a table
-
-→ ⚠️ Items with < 5 stock show LOW STOCK
-
-- Search
-
-→ Search by product code or variant code
-
-- Update Product
-
-Update Name
-
-Update Code
-
-- Update Variant
-
-Name
-
-Code
-
-Color
-
-Quantity
-
-Price
-
-- Delete
-Delete Product
-
-Delete Single Variant
-
-- Back to Main Menu
-💰 3. Sales Management
-- Sell Product
-
-→ Enter customer details
-
-→ Select products & quantity
-
-→ Receipt auto-generated
-
-→ Stock updates automatically
-
-- View Sales History
-
-→ Shows all past sales
-
-- Daily Sales Report
-
-→ Displays today's sales + total revenue
-
-- Clear Sales History
-
-→ ⚠️ Permanently deletes all records
-
-- Edit Receipt
-
-Edit Customer Name
-
-Edit Customer Phone
-
-Edit Sale Date
-
-- Back to Main Menu
+If you chose 3. Sales Management you will see 
+    - Sell Product
+       → Enter customer details
+       → Select products & quantity
+       → Receipt auto-generated
+       → Stock updates automatically
+  - View Sales History
+       → Shows all past sales
+  - Daily Sales Report
+       → Displays today's sales + total revenue
+  - Clear Sales History
+       →  Permanently deletes all records
+  - Edit Receipt
+       →  Edit Customer Name
+       →  Edit Customer Phone
+       →  Edit Sale Date
+  - Back to Main Menu
     
 #### Features
 Secure Admin Login: Supports multiple users with MD5 password hashing and account lock after 3 failed attempts.
