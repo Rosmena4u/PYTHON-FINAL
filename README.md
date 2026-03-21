@@ -166,8 +166,19 @@ project/
 #### License
 This project is licensed under the MIT License — see LICENSE for details.
 
-#### Screenshots and GIFs
+### Screenshots
 
+### Main Menu
+![Main Menu](screenshots/screenshot_main.png)
+
+### Dashboard
+![Dashboard](screenshots/screenshot_dashboard.png)
+
+### Inventory Management
+![Inventory](screenshots/screenshot_inventory.png)
+
+### Sales Management
+![Sales](screenshots/screenshot_sales.png)
 
 #### Changelog
 v1.0.0
