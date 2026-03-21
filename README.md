@@ -22,79 +22,112 @@ To get the system running on your local machine, follow these four steps:
     python main.py 
     cd banji-inventory 
 
-#### Usage
+## Usage
+
 This section explains how to run and use the system.
 
-Before logging in, you need to create an admin account .
-     Step 1: Generate Password Hash
-             Create a Python file (e.g., create_hash.py) and add:
-#systax
+---
+
+### Creating an Admin Account
+
+Before logging in, you need to create an admin account manually.
+
+**Step 1 — Generate Password Hash**
+
+Create a Python file (e.g. `create_hash.py`) and add:
+
+```python
 import hashlib
 password = "yourpassword"  # Put your password here
 hashed = hashlib.md5(password.encode()).hexdigest()
 print(hashed)
+```
 
-Run the file, and you will see a hash output in the terminal.
-Example:  9e3669d19b675bd57058fd4664205d2a
+Run the file and you will see a hash output in the terminal. For example:
 
-Copy this hash — you will need it in the next step.
+```
+9e3669d19b675bd57058fd4664205d2a
+```
 
-   Step 2: Create Admin File
-           Create a file called:"admin1.txt" inside the "data/" folder ,Add your username and      
-           hashed password: admin1,9e3669d19b675bd57058fd4664205d2a
-   Step 3: Login
-           - Login using your username and your real password (not the hash)
-           - If you enter the wrong password 3 times, the system will lock for 5 seconds
+> **Copy this hash — you will need it in the next step.**
 
-After logging in you will see a Main Menu:
+---
 
+**Step 2 — Create Admin File**
+
+Create a file called `admin1.txt` inside the `data/` folder and write:
+
+```
+admin1,9e3669d19b675bd57058fd4664205d2a
+```
+
+---
+
+**Step 3 — Login**
+
+- Login using your username and your **real password** (not the hash)
+- If you enter the wrong password 3 times, the system will lock for 5 seconds
+
+---
+
+### Main Menu
+
+After logging in you will see:
+
+```
 1. Dashboard / Reporting
 2. Inventory Management
 3. Sales Management
 4. Exit
-   
-If you chose  1. Dashboard / Reporting you will see
-    - Weekly Revenue Detail
-       → Shows day-by-day breakdown (Monday → Sunday)
-    - Change Month View
-       → Select month (1–12)
-    - Run Strategic Business Analysis
-       → Compares this month vs last month
-       → Shows peak sales day
-    - Return to Menu
-    
-If you chose 2. Inventory Management you will see
-    - Add Product
-       → Add product name & code
-       → Add variants (color, quantity, price)
-    - View Products
-       → Displays all items in a table
-       →  Items with < 5 stock show LOW STOCK
-    - Search
-      → Search by product code or variant code
-    - Update Product 
-        → Enter product code to update :
-    - Update Variant , Name , Code , Color ,Quantity, Price
-    - Delete  : Delete Product , Delete Single Variant
-    - Back to Main Menu
+```
 
-If you chose 3. Sales Management you will see 
-    - Sell Product
-       → Enter customer details
-       → Select products & quantity
-       → Receipt auto-generated
-       → Stock updates automatically
-  - View Sales History
-       → Shows all past sales
-  - Daily Sales Report
-       → Displays today's sales + total revenue
-  - Clear Sales History
-       →  Permanently deletes all records
-  - Edit Receipt
-       →  Edit Customer Name
-       →  Edit Customer Phone
-       →  Edit Sale Date
-  - Back to Main Menu
+---
+
+### 1. Dashboard / Reporting
+
+| Option | Description |
+|--------|-------------|
+| Weekly Revenue Detail | Shows day-by-day breakdown (Monday to Sunday) |
+| Change Month View | Select month (1-12) |
+| Strategic Business Analysis | Compares this month vs last month and shows peak sales day |
+| Return to Menu | Goes back to the main menu |
+
+---
+
+### 2. Inventory Management
+
+| Option | Description |
+|--------|-------------|
+| Add Product | Add product name and code, then add variants (color, quantity, price) |
+| View Products | Displays all items in a table. Items with less than 5 stock show LOW STOCK |
+| Search | Search by product code or variant code |
+| Update Product | Enter product code to update name or code |
+| Update Variant | Update name, code, color, quantity, or price of a variant |
+| Delete | Delete entire product or a single variant |
+| Back to Main Menu | Returns to the main menu |
+
+---
+
+### 3. Sales Management
+
+| Option | Description |
+|--------|-------------|
+| Sell Product | Enter customer details, select products and quantity, receipt auto-generated, stock updates automatically |
+| View Sales History | Shows all past sales |
+| Daily Sales Report | Displays today's sales and total revenue |
+| Clear Sales History | Permanently deletes all records |
+| Edit Receipt | Edit customer name, phone, or sale date |
+| Back to Main Menu | Returns to the main menu |
+
+---
+
+### Important Notes
+
+- Each admin has their own personal inventory and sales files
+- Your password is stored as a hash and is never saved in plain text
+- Stock is automatically reduced when a sale is made
+- If you forget your password, generate a new hash and update your `.txt` file
+
     
 #### Features
 Secure Admin Login: Supports multiple users with MD5 password hashing and account lock after 3 failed attempts.
