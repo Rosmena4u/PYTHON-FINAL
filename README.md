@@ -136,31 +136,32 @@ Secure Admin Login: Supports multiple users with MD5 password hashing and accoun
   3. Business Dashboard: Displays sales data using ASCII charts, including weekly revenue, peak sales days, and monthly growth.
   4. Data Persistence: Saves all data automatically using:.json for inventory and.txt for sales history
 
-#### Project Structure
+## Project Structure
+
+```
 project/
+├── main.py               # System entry & login
+├── inventory.py          # Product & stock management
+├── salemanagement.py     # Sales logic & classes
+├── dashboard.py          # Reports & analytics
+└── data/                 # Data storage
+    ├── admin1.txt        # Encrypted login credentials
+    ├── inventory.json    # Inventory database
+    └── sales.txt         # Sales history
+```
 
-├── main.py 			      # System entry & login
+---
 
-├── inventory.py	 	    # Product & stock management
+## Contributing
 
-├── salemanagement.py 	# Sales logic & classes
+### Core Contributors
 
-├── dashboard.py		     # Reports & analytics
-
-└── data/ 			         # Data storage
-
-├── admin1.txt		       # Encrypted login credentials
-
-├── inventory.json		    # Inventory database
-
-└── sales.txt			       # Sales history
-
-#### Contributing
-Core Contributors
-  - Iv Meytan
-  - Sarun Yohana
-  - Thea Kanika
-  - Meas Soklin
+| Name | Module |
+|------|--------|
+| Iv Meytan | dashboard.py |
+| Sarun Yohana | main.py |
+| Thea Kanika | salemanagement.py |
+| Meas Soklin | inventory.py |
 
 #### License
 This project is licensed under the MIT License — see LICENSE for details.
