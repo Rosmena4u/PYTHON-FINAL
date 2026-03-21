@@ -168,17 +168,21 @@ This project is licensed under the MIT License — see LICENSE for details.
 
 ### Screenshots
 
+
 ### Main Menu
-![Main Menu](screenshots/screenshot_main.png)
+<img width="1012" height="376" alt="image" src="https://github.com/user-attachments/assets/cb145e91-eef6-44e8-b149-c2c3db307019" />
 
 ### Dashboard
-![Dashboard](screenshots/screenshot_dashboard.png)
+<img width="671" height="488" alt="image" src="https://github.com/user-attachments/assets/52c2b45d-6135-485a-b029-1916eab01f4e" />
+
 
 ### Inventory Management
-![Inventory](screenshots/screenshot_inventory.png)
+<img width="358" height="239" alt="image" src="https://github.com/user-attachments/assets/922f75da-4035-446c-86f4-1c8add3ba615" />
+
 
 ### Sales Management
-![Sales](screenshots/screenshot_sales.png)
+<img width="312" height="166" alt="image" src="https://github.com/user-attachments/assets/5ec61dda-dc7a-4fd9-b991-473f34c4979f" />
+
 
 #### Changelog
 v1.0.0
